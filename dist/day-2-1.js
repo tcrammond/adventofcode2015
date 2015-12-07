@@ -2,6 +2,15 @@
 
 var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; })();
 
+/*
+ The elves are running low on wrapping paper, and so they need to submit an order for more. They have a list of the
+ dimensions (length l, width w, and height h) of each present, and only want to order exactly as much as they need.
+
+ Fortunately, every present is a box (a perfect right rectangular prism), which makes calculating the required wrapping
+ paper for each gift a little easier: find the surface area of the box, which is 2*l*w + 2*w*h + 2*h*l. The elves also
+ need a little extra paper for each present: the area of the smallest side.
+ */
+
 var presents = getData();
 var paperNeeded = 0;
 

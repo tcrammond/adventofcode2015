@@ -2,6 +2,15 @@
 
 var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; })();
 
+/*
+ The elves are also running low on ribbon. Ribbon is all the same width, so they only have to worry about the length
+ they need to order, which they would again like to be exact.
+
+ The ribbon required to wrap a present is the shortest distance around its sides, or the smallest perimeter of any
+ one face. Each present also requires a bow made out of ribbon as well; the feet of ribbon required for the perfect
+ bow is equal to the cubic feet of volume of the present. Don't ask how they tie the bow, though; they'll never tell.
+ */
+
 var presents = getData();
 var paperNeeded = 0;
 var ribbonNeeded = 0;
